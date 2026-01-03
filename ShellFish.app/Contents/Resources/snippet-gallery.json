@@ -1,0 +1,172 @@
+{
+  "weather": {
+    "body": ["curl 'https://wttr.in/?0'\n"],
+    "description": "Weather from terminal"
+  },
+  "external-ip": {
+    "body": ["dig @resolver4.opendns.com myip.opendns.com +short\n"],
+    "description": "Lookup external IP"
+  },
+  "30-day-old-files": {
+    "body": ["find . -mtime +30 -print", ""],
+    "description": "Find all files older than 30 days"
+  },
+  "git-top-committers": {
+      "body": ["git shortlog -sn --all --no-merges\n"],
+      "description": "Top #Git committers"
+  },
+  "sudo-last-command": {
+      "body": ["sudo !!\n"],
+      "description": "Repeat last command as superuser"
+  },
+  
+  "modified-last-5-mins": {
+      "body": ["find . -type f -mmin -5"],
+      "description": "Find files modified in the last 5 minutes"
+  },
+  "enable-wifi": {
+      "body": ["sudo networkctl up wlan0"],
+      "description": "Enable (wifi) network interface"
+  },
+  "memory-usage": {
+      "body": ["cat /proc/meminfo\n"],
+      "description": "#Linux Get memory usage"
+  },
+  "list-open-ports": {
+      "body": ["sudo netstat --program --tcp --udp --numeric --listening"],
+      "description": "#Linux List open ports and their processes"
+  },
+  "debian-list-packages": {
+      "body": ["apt list --upgradable"],
+      "description": "List #Debian package updates"
+  },
+  "debian-search-packages": {
+      "body": ["dpkg --search /etc/os-release"],
+      "description": "Search installed #Debian packages"
+  },
+  "systemd-running": {
+      "body": ["systemctl --state running"],
+      "description": "#systemd Get all running services"
+  },
+  "get-system-time": {
+      "body": ["timedatectl status"],
+      "description": "#systemd Get system time and NTP/RTC state"
+  },
+  "all-ip-addresses": {
+      "body": ["networkctl --no-pager status"],
+      "description": "#systemd Get all IP addresses"
+  },
+  "monitor-new-logs-for-service": {
+      "body": ["journalctl --follow --since now --unit systemd-networkd.service"],
+      "description": "#systemd Monitor new logs for a service"
+  },
+  "source-shellfish-rc": {
+      "body": ["LC_TERMINAL=ShellFish source $HOME/.shellfishrc\n"],
+      "description": "Reload #Shellfish integration"
+  },
+  "list-dirs-by-size": {
+      "body": ["du -sh -- */ | sort -rh\n"],
+      "description": "List directories by size"
+  },
+  "list-hidden-dirs-by-size": {
+      "body": ["du -sh -- .[^.]* | sort -rh\n"],
+      "description": "List hidden directories by size"
+  },
+  "previous-command-snippet": {
+      "body": ["snip !!\n"],
+      "description": "Add previous command as #Shellfish snippet"
+  },
+  "list-docker-containers": {
+      "body": ["docker ps --format \"table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}\"\n"],
+      "description": "List #docker containers"
+  },
+  
+  "install-claude-code": {
+      "body": ["npm install -g @anthropic-ai/claude-code\n"],
+      "description": "Install #Claude code"
+  },
+  "claude-sonnet": {
+      "body": ["claude --model sonnet\n"],
+      "description": "Start #Claude with Sonnet model"
+  },
+  "claude-opus": {
+      "body": ["claude --model opus\n"],
+      "description": "Start #Claude with Opus model"
+  },
+  "claude-continue": {
+      "body": ["claude --continue\n"],
+      "description": "Continue previous #Claude conversation"
+  },
+  "claude-resume": {
+      "body": ["claude --resume\n"],
+      "description": "Resume last #Claude conversation"
+  },
+  "claude-basic": {
+      "body": ["claude\n"],
+      "description": "Start #Claude interactive session"
+  },
+  "claude-plan": {
+      "body": ["claude --plan\n"],
+      "description": "Start #Claude in planning mode"
+  },
+  "claude-help": {
+      "body": ["claude --help\n"],
+      "description": "Show #Claude help and options"
+  },
+  "claude-version": {
+      "body": ["claude --version\n"],
+      "description": "Show #Claude version"
+  },
+  "claude-update": {
+      "body": ["npm update -g @anthropic-ai/claude-code\n"],
+      "description": "Update #Claude to latest version"
+  },
+  "npm-init": {
+      "body": ["npm init -y\n"],
+      "description": "#node Initialize package.json with defaults"
+  },
+  "npm-install": {
+      "body": ["npm install\n"],
+      "description": "#node Install all dependencies"
+  },
+  "npm-install-dev": {
+      "body": ["npm install --save-dev "],
+      "description": "#node Install dev dependency"
+  },
+  "npm-start": {
+      "body": ["npm start\n"],
+      "description": "#node Start the application"
+  },
+  "npm-run-dev": {
+      "body": ["npm run dev\n"],
+      "description": "#node Run development server"
+  },
+  "npm-run-build": {
+      "body": ["npm run build\n"],
+      "description": "#node Build for production"
+  },
+  "npm-test": {
+      "body": ["npm test\n"],
+      "description": "#node Run tests"
+  },
+  "npm-audit": {
+      "body": ["npm audit\n"],
+      "description": "#node Check for vulnerabilities"
+  },
+  "npx-create-next": {
+      "body": ["npx create-next-app@latest "],
+      "description": "#node Create Next.js app"
+  },
+  "node-version": {
+      "body": ["node --version\n"],
+      "description": "#node Check Node.js version"
+  },
+  "kill-port-3000": {
+      "body": ["lsof -ti:3000 | xargs kill -9\n"],
+      "description": "#node Kill process on port 3000"
+  },
+  "tmux-search-forward-kbd": {
+      "body": ["\u0002[⌘(delay:100)\u0013"],
+      "description": "#tmux #search"
+  },
+}
