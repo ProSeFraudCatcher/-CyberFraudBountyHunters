@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  ShellFish
+//
+//  Created by Anders Borum on 17/06/2025.
+//  Copyright © 2025 Anders Borum. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+APP_BUILD      = 3589
